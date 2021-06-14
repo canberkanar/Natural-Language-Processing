@@ -65,9 +65,7 @@ if __name__ == '__main__':
     print(data_df.shape)
     print(data_df.LABEL.value_counts())
     print(data_df.head())
-    # __label1__ is REAL REVIEW
-    # __label2__ is FAKE REVIEW
-    # Run on CONDA Terminal to import the model --> python -m spacy download en_core_web_sm
+
     nlp = spacy.load('en_core_web_sm')
 
     # Following lines convert string formatted information into integer for better training performance
@@ -84,7 +82,7 @@ if __name__ == '__main__':
     data_df.drop("PRODUCT_TITLE", axis=1, inplace=True)
     data_df.drop("PRODUCT_ID", axis=1, inplace=True)
 
-    data_df.to_csv("Dataset/amazon_reviews_cleaned_train.csv")
+    data_df.to_csv("Dataset/amazon_reviews_cleaned_train.csv", index=False)
 
     # X_train, X_test, _, _ = train_test_split(data_df, data_df["LABEL"], test_size=0.2)
     #
