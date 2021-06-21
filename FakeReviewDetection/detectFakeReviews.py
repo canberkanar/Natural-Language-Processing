@@ -53,8 +53,10 @@ if __name__ == '__main__':
     #print(len(x_val == 1))
 
 
-
-    model_classifier = tf.keras.models.load_model('Models/fakeNewsDetector.hdf5', custom_objects={'KerasLayer':hub.KerasLayer})
+    try:
+        model_classifier = tf.keras.models.load_model('Models/fakeNewsDetector.hdf5', custom_objects={'KerasLayer':hub.KerasLayer})
+    except OSError:
+        model_classifier = None
 
 
     if not model_classifier:
