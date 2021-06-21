@@ -1,3 +1,4 @@
+from google.protobuf.descriptor import Error
 import pandas as pd
 import tensorflow as tf
 import tensorflow.keras as keras
@@ -70,7 +71,10 @@ if __name__ == '__main__':
 
     #print(partial_x_train[0:1])
 
-    model_classifier = tf.keras.models.load_model('Models/fakeNewsDetector_Advanced.hdf5', custom_objects={'KerasLayer':hub.KerasLayer})
+    try:
+        model_classifier = tf.keras.models.load_model('Models/fakeNewsDetector_Advanced.hdf5', custom_objects={'KerasLayer':hub.KerasLayer})
+    except OSError:
+        model_classifier = None
 
     if not model_classifier:
         # We define how the input layers to our model look like. One input is text and the other if the purchase is verified or not
