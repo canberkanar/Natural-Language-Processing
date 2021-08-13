@@ -5,5 +5,5 @@ In scope of this research project, we have experimented with state of the art ap
 ### Content
 
 1 - Transfer Learning with Tensorflow Hub Model
-    ++ Experiments were conducted on a simple model by using a pre-trained model provided through tensorflow hub. Weight were frozen and unfrozen to observe the different training behaviour.
+    + Experiments were conducted on a simple model by using a pre-trained model provided through tensorflow hub. Weight were frozen and unfrozen to observe the different training behaviour.
     
