@@ -8,6 +8,14 @@ In scope of this research project, we have experimented with state of the art ap
 
 - Experiments were conducted on a simple model by using a pre-trained model provided through tensorflow hub. Weight were frozen and unfrozen to observe the different training behaviour.
 
+2 - Fake review detection review using biLSTM
+
+- We use keras functional API to build a architecture with 3 heads to process 3 different features. The head that is used to process the 'text' has the biLSTM. The result of the heads are concatenated and processed further. In this notebook we show how keras functional API could be used to build complex architectures.
+
+3 - Explainable AI(XAI)
+
+- In this notebook we show how a smart feature engineering could help us build a simple model that is interpretable. We encode the information from categorical features into the text. The text is then process by a model build using the Keras Sequential API. 'LIME' method of explanations are then used to explain the predictions of the model.
+
 
 5 - Transformer Model of distilled Bert
 
