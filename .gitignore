@@ -1,2 +1,4 @@
 FakeReviewDetection/.idea/
 Anomaly-Detection/.idea/
+.ipynb_checkpoints/Preprocessor-checkpoint.ipynb
+Word2vec/.ipynb_checkpoints/Word2Vec_fake_review_detection-checkpoint.ipynb
